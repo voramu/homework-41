@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #090d16;
+    --card: #111827;
+    --border: #263246;
+    --primary: #6485ff;
+    --primary-hover: #4d6ee8;
+    --text: #f5f7ff;
+    --muted: #8994a8;
+    --error: #ff626f;
+    --success: #4ade80;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 15%, #18264a 0, transparent 35%),
+        radial-gradient(circle at 85% 85%, #171e3c 0, transparent 35%),
+        var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* LOGIN PAGE */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(17, 24, 39, 0.94);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 42px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.auth-heading {
+    margin: 40px 0 30px;
+}
+
+.auth-heading h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.auth-heading p,
+.profile-title p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    height: 52px;
+    background: #0b1220;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0 15px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(100, 133, 255, 0.12);
+}
+
+.form-group input.invalid {
+    border-color: var(--error);
+}
+
+.form-group input::placeholder {
+    color: #647084;
+}
+
+.error {
+    display: block;
+    min-height: 17px;
+    margin-top: 6px;
+    color: var(--error);
+    font-size: 12px;
+}
+
+.server-error {
+    color: var(--error);
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button {
+    font-family: inherit;
+}
+
+#loginButton {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginButton:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+#loginButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+.auth-footer p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.auth-footer span {
+    display: block;
+    margin-top: 7px;
+    font-size: 10px;
+    color: #59667d;
+    letter-spacing: 1px;
+}
+
+/* PROFILE PAGE */
+
+.profile-container {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logout-button {
+    padding: 12px 25px;
+    border: 1px solid #49303b;
+    border-radius: 9px;
+    background: #241822;
+    color: #ff7582;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background: #47222c;
+}
+
+.profile-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 80px auto;
+    flex: 1;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.profile-title {
+    margin-bottom: 35px;
+}
+
+.profile-title h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.profile-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.profile-cover {
+    height: 150px;
+    background: linear-gradient(120deg, #354f9e, #657dff, #282e68);
+}
+
+.profile-info {
+    padding: 0 35px 35px;
+}
+
+.user-image {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--card);
+    margin-top: -58px;
+    background: #263246;
+}
+
+.user-heading {
+    margin: 18px 0 35px;
+}
+
+.user-heading h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.user-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: rgba(74, 222, 128, 0.1);
+    color: var(--success);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    padding: 20px;
+    background: #0b1220;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.info-item span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.info-item strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.loading {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.profile-footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .auth-heading h1 {
+        font-size: 23px;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-content {
+        margin: 45px auto;
+    }
+
+    .profile-title h1 {
+        font-size: 29px;
+    }
+
+    .profile-info {
+        padding: 0 20px 25px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-cover {
+        height: 110px;
+    }
+
+    .user-image {
+        width: 95px;
+        height: 95px;
+        margin-top: -48px;
+    }
+}
